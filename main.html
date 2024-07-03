@@ -1,16 +1,121 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+      background-color: #ffffff;
+      padding: 20px;
+      width: 400px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="password"],
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    input[type="checkbox"] {
+      margin-top: 10px;
+    }
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+  <form action="#" method="post">
+    <div class="form-group">
+      <label for="name">Name <span style="color: red;">*</span></label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email <span style="color: red;">*</span></label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+
+    <div class="form-group">
+      <label>Gender <span style="color: red;">*</span></label><br>
+      <input type="radio" id="gender_m" name="gender" value="male" required>
+      <label for="gender_m">Male</label>
+      <input type="radio" id="gender_f" name="gender" value="female" required>
+      <label for="gender_f">Female</label>
+    </div>
+
+    <div class="form-group">
+      <label for="cars">Car Brands <span style="color: red;">*</span></label>
+      <select id="cars" name="cars" required>
+        <option value="" disabled selected>-- Please choose an option --</option>
+        <option value="Toyota">Toyota</option>
+        <option value="Honda">Honda</option>
+        <option value="Ford">Ford</option>
+        <option value="Chevrolet">Chevrolet</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age <span style="color: red;">*</span></label>
+      <input type="number" id="age" name="age" placeholder="Enter your age" required>
+    </div>
+
+    <div class="form-group">
+      <label for="dob">Date of Birth <span style="color: red;">*</span></label>
+      <input type="date" id="dob" name="dob" required>
+    </div>
+
+    <div class="form-group">
+      <label for="tel">Phone Number</label>
+      <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Enter your phone number">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password <span style="color: red;">*</span></label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+    </div>
+
+    <div class="form-group">
+      <input type="checkbox" id="tos" name="tos" required>
+      <label for="tos">I agree to the Terms of Service <span style="color: red;">*</span></label>
+    </div>
+
+    <button type="submit">Sign Up</button>
+  </form>
 
 </body>
-
 </html>
